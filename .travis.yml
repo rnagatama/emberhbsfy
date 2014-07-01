@@ -4,5 +4,4 @@ node_js:
   - 0.10
 before_script:
   - sudo $(which npm) link
-  # Install the ember-template-compiler peer dependency
   - npm install ember-template-compiler@1

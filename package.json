@@ -1,30 +1,49 @@
 {
-  "name": "emberhbsfy",
-  "version": "1.0.1-beta",
-  "description": "Ember Handlebars precompiler plugin for Browserify",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rnagatama/emberhbsfy"
-  },
-  "keywords": [
-    "ember",
-    "browserify",
-    "emberhbsfy"
-  ],
-  "author": "Riko Nagatama",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rnagatama/emberhbsfy/issues"
-  },
-  "homepage": "https://github.com/rnagatama/emberhbsfy",
-  "dependencies": {
-	"through": "2.3.4"
-  },
-  "peerDependencies": {
-	"ember-template-compiler": "1.5.1"
-  }
+	"name": "emberhbsfy",
+	"version": "1.0.1-beta",
+	"description": "Ember Handlebars precompiler plugin for Browserify",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha ./test/test.js -R spec"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rnagatama/emberhbsfy"
+	},
+	"keywords": [
+		"ember",
+		"browserify",
+		"emberhbsfy"
+	],
+	"author": "Riko Nagatama",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rnagatama/emberhbsfy/issues"
+	},
+	"homepage": "https://github.com/rnagatama/emberhbsfy",
+	"dependencies": {
+		"through": "2.3.4"
+	},
+	"peerDependencies": {
+		"ember-template-compiler": "*"
+	},
+	"devDependencies": {
+		"browserify": "~4.2.0",
+		"browserify-shim": "~3.6.0",
+		"concat-stream": "~1.4.1",
+		"mocha": "~1.18.2"
+	},
+	"browser": {
+		"jquery": "./test/lib/jquery.min.js",
+		"handlebars": "./test/lib/handlebars.min.js",
+		"ember": "./test/lib/ember.min.js"
+	},
+	"browserify-shim": {
+		"jquery": "global:$",
+		"handlebars": "global:Handlebars",
+		"ember": { "depends": ["jquery:$", "handlebars:Handlebars"], "exports": "global:Ember" }
+	},
+	"browserify": {
+		"transform": [ "browserify-shim" ]
+	}
 }

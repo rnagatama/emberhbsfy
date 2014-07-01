@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rnagatama/emberhbsfy.png?branch=master)](https://travis-ci.org/rnagatama/emberhbsfy)
+
 # emberhbsfy
 
 [Ember][] [Handlebars] precompiler plugin for [Browserify][].

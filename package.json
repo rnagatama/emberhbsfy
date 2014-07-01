@@ -1,0 +1,30 @@
+{
+  "name": "emberhbsfy",
+  "version": "1.0.0-beta",
+  "description": "Ember Handlebars precompiler plugin for Browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnagatama/emberhbsfy"
+  },
+  "keywords": [
+    "ember",
+    "browserify",
+    "emberhbsfy"
+  ],
+  "author": "Riko Nagatama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rnagatama/emberhbsfy/issues"
+  },
+  "homepage": "https://github.com/rnagatama/emberhbsfy",
+  "dependencies": {
+	"through": "2.3.4"
+  },
+  "peerDependencies": {
+	"ember-template-compiler": "1.5.1"
+  }
+}

@@ -4,7 +4,7 @@
 
 [Ember][] [Handlebars] precompiler plugin for [Browserify][].
 
-Compiles Handlebars templates using [ember-template-compiler][] to plain Javascript.
+Compiles Handlebars templates using [ember-template-compiler][] to plain Javascript. [ember-template-compiler][] needs to be installed manually. If you use [Ember][] 1.5.1, then install [ember-template-compiler][] 1.5.1.
 
 ## Usage
 
